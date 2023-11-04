@@ -13,7 +13,6 @@
   </nav>
   <div>
     <Route path="/page" component={Page} />
-    <!-- <Route path="/"><H/></Route> -->
   </div>
 </Router>
 
