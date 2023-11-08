@@ -82,7 +82,7 @@
     "query": `${value}`
   })
   .then(function (response) {
-    console.log(response.data);
+    // console.log(response.data);
     var data=response.data.result;
     if (data) {
             // Assuming data is an array of rows where each row is an object
