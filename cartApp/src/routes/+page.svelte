@@ -1,5 +1,6 @@
 <script>
     import {cart} from './../stores.js';
+    import {cart_items} from './../stores.js';
 
     const increment = () =>{
         cart.update((n) => n+1);
@@ -19,6 +20,22 @@
         cart_value=value;
     })
 
+
+    cart_items.subscribe((value) =>{
+        console.log(value);
+    })
+
+    const add_item = (value) => {
+        cart_items.update((n) => [...n, value]);
+    }
+
+
+
+    add_item(1);
+    add_item(1);
+    add_item(1);
+    add_item(1);
+
 </script>
 
 
@@ -29,11 +46,13 @@
     +
 </button>
 
-<button on:click={decrementcrement}>
+<button on:click={decrement}>
     -
 </button>
 
 <button on:click={reset}>
     reset    
 </button>
+
+
 
